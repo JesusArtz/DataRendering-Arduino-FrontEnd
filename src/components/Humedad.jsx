@@ -22,7 +22,8 @@ export default function GraficaHumedad(){
 
     useEffect(
         () => {
-            let response = API();
+            const interval = setInterval(() => {
+                let response = API();
 
             
             response.then(res => setData(
@@ -43,9 +44,13 @@ export default function GraficaHumedad(){
                     },
                     options: {
                         responsive: false,
+                        animation: false,
                     }
                 }
             ))
+            }, 100)
+
+            return () => clearInterval(interval)
 
         }, []
     )

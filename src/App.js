@@ -2,16 +2,21 @@
 import GraficaTemperatura from './components/Temperatura';
 import './App.css';
 import GraficaHumedad from './components/Humedad';
+import NivTemperatura from './components/TemperaturaIt';
+import NivHumedad from './components/HumedadIt';
+
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div>
-          <h1>Humedad: {}%</h1>
-          <h1>Temperatura: {}°C</h1>
+          <NivHumedad/>
+          <NivTemperatura/>
         </div>
         <div>
+          
           <GraficaTemperatura/>
           <GraficaHumedad/>
         </div>    
